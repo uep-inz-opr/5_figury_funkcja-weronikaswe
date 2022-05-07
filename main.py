@@ -11,7 +11,7 @@ def pole(dane_figury):
         return prostokat
     elif len(dane_figury) == 3:
         p = (float(dane_figury[0])+float(dane_figury[1])+float(dane_figury[2]))/2
-        trojkat = math.sqrt(p*(p-dane_figury[0])*(dane_figury[1]*dane_figury[2]))
+        trojkat = math.sqrt(p*(p-float(dane_figury[0]))*(float(dane_figury[1])*float(dane_figury[2])))
         return trojkat
     else:
         print("Błąd: można podać maksymalnie 3 liczby")
@@ -27,5 +27,6 @@ for i in range(int(liczba_figur)):
   dane_figury = dane_figury.split(' ')
   sumka += pole(dane_figury)
 
-print(sumka)
+print(round(sumka, 2))
+
 
